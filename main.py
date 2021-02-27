@@ -77,4 +77,4 @@ async def on_message(message):
 # Code for Command await
     await client.process_commands(message)
 
-client.run("ODE0MDMyMDQxMDI4MzU0MDY4.YDX8ag.BlH6GEsXvYruZG1vcxEYvVW60jY")
+client.run("ODE0MDMyMDQxMDI4MzU0MDY4.YDX8ag.BlH6GEsXvYruZG1vcxEYvVW60jY") # Token of the bot you have created
