@@ -13,35 +13,12 @@ async def on_ready():
     print(" ")
     await client.change_presence(activity = discord.Game("Poda Venna"))
 
-# Code for ABOUT BOT
-@client.command(name='about')
-async def about(context):
-  myEmbed = discord.Embed(title="About ARASSHWAN",description="The group with so much power of Swaddy")
-  myEmbed.add_field(name="Aswin",value="Vj aalu",inline=False)
-  myEmbed.add_field(name="Satney",value="Mani aalu",inline=False)
-  myEmbed.add_field(name="Aarthmaseels",value="Tharma aalu",inline=False)
-  myEmbed.add_field(name="Keerths",value="badava bashkar aalu",inline=False)
-  await context.channel.send(embed=myEmbed)
-
 
 # Entire Code for Message
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
-
-# Code for Commands
-    if message.content == "$commands":
-      myEmbed = discord.Embed(title="COMMANDS",description="")
-      myEmbed.add_field(name="$hello",value="Intro about the bot",inline=False)
-      myEmbed.add_field(name="$AB [OBJ Name]",value="Picture of the object",inline=False)
-      myEmbed.add_field(name="$hello who is swaddy",value="Swaddy intro B|",inline=False)
-
-      await message.channel.send(embed = myEmbed)
-
-# Code for Intro about bot
-    if message.content == "$hello":
-      await message.channel.send("I am AstroBot. I was created by the great Lord Wolf Swaddy")
 
 # Code for Image Display
     if message.content.startswith("$AB "):
@@ -88,9 +65,6 @@ async def on_message(message):
         await message.channel.send("Getting the images from DSS. Will take some time LOL")
         await message.channel.send(url)
 
-# Code for Swaddy INTRO
-    if message.content == "$hello who is swaddy":
-      await message.channel.send("The Lord Quantum Wolf is Swaddy")
 
 # Code for Checking Status
     if message.content == "$check":
